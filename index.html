@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Menu one</title>
+</head>
+
+<body>
+
+    <video class="video"      src="videos/plainBg2.mp4" style="" loop autoplay muted>
+ 
+    </video>
+    <div class="heading1 heading">
+        <h2 class="blueColor"><br><span class="blueColor"></span></h2>
+        <P><br><span class="redColor"></span></P>
+    </div>
+    <div class="heading2 heading">
+        <h2 class="whiteColor"><br><span class="whiteColor"></span></h2>
+        <P class="yellowColor"><br><span class="whiteColor"></span></P>
+    </div>
+    <div class="heading3 heading">
+        <h2 class="blueColor"><br><span class="blueColor"></span></h2>
+        <P class=""> <br><span class="redColor"></span></P>
+    </div>
+    <div class="heading4 heading">
+        <h2 class="whiteColor"><br><span class="whiteColor"></span></h2>
+        <P class="yellowColor"><br><span class="whiteColor"></span></P>
+    </div>
+    <div class="heading5 heading">
+        <h2 class="blueColor"><br><span class="blueColor"></span></h2>
+        <P><br><span class="redColor"></span></P>
+    </div>
+    <div class="comboImages comboImages1 display_flex">
+    </div>
+    <div class="comboImages comboImages2 display_flex">
+    </div>
+    <div class="comboImages comboImages3 display_flex">
+    </div>
+    <div class="comboImages comboImages4 display_flex">
+    </div>
+    <div class="comboImages comboImages5 display_flex">
+    </div>
+    <img src="" class="vegMark vegMark1" alt="">
+    <img src="" class="vegMark vegMark2" alt="">
+    <img src="" class="vegMark vegMark3" alt="">
+    <img src="" class="vegMark vegMark4" alt="">
+    <img src="" class="vegMark vegMark5" alt="">
+    <div class=" rupesign rupe1 rupe">&#8377;</div>
+    <span class="price1 price"></span>
+    <div class=" rupesign rupe2 rupe">&#8377;</div>
+    <span class="price2 price"></span>
+    <div class=" rupesign rupe3 rupe">&#8377;</div>
+    <span class="price3 price"></span>
+    <div class=" rupesign rupe4 rupe">&#8377;</div>
+    <span class="price4 price"></span>
+    <div class=" rupesign rupe5 rupe">&#8377;</div>
+    <span class="price5 price"></span>
+    <div class=" rupesign rupe6 rupe">&#8377;</div>
+    <span class="price6 price"></span>
+    <div class=" rupesign rupe7 rupe">&#8377;</div>
+    <span class="price7 price"></span>
+    <div class=" rupesign rupe8 rupe">&#8377;</div>
+    <span class="price8 price"></span>
+    <div class=" rupesign rupe9 rupe">&#8377;</div>
+    <span class="price9 price"></span>
+    <div class=" rupesign rupe10 rupe">&#8377;</div>
+    <span class="price10 price"></span>
+
+    <div class="sold sold-1">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-2">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-3">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-4">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-5">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-6">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-7">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-8">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-9">
+        <img src="./img/sold.png" alt="">
+    </div>
+    <div class="sold sold-10">
+        <img src="./img/sold.png" alt="">
+    </div>
+
+    <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+    <script>
+        const url = "https://docs.google.com/spreadsheets/d/1xqM2MnQNneoBTcBrbMgbxXv5KNAUmBGSDEXGqeLr4ks/export?format=csv";
+
+        let price = document.querySelectorAll(".price")
+        let rupe = document.querySelectorAll(".rupe")
+
+        let allPrices = {}
+        let threeDigit = {
+            one: "235px",
+            two: "316px",
+            three: "630px",
+            four: "715px",
+            five: "1027px",
+            six: "1095px",
+            seven: "1401px",
+            eight: "1485px",
+            nine: "1757px",
+            ten: '1829px'
+        }
+        let twoDigit = {
+            one: "250px",
+            two: "327px",
+            three: "665px",
+            four: "746px",
+            five: "1073px",
+            six: "1148px",
+            seven: "1418px",
+            eight: "1498px",
+            nine: "1772px",
+            ten: '1845px'
+        }
+        let threeDigit_bottom = {
+            one: "973px",
+            two: "991px",
+            three: "384px",
+            four: "400px",
+            five: "992px",
+            six: "1005px",
+            seven: "399px",
+            eight: "418px",
+            nine: "958px",
+            ten: "975px"
+        }
+        let twoDigit_bottom = {
+            one: "988px",
+            two: "1003px",
+            three: "399px",
+            four: "417px",
+            five: "1000px",
+            six: "1013px",
+            seven: "417px",
+            eight: "432px",
+            nine: "968px",
+            ten: "985px"
+        }
+        let rupeIn_3_Digit = {
+            one: "108px",
+            two: "90px",
+            three: "699px",
+            four: "680px",
+            five: "90px",
+            six: "77px",
+            seven: "683px",
+            eight: "665px",
+            nine: "120px",
+            ten: "107px"
+        }
+        let rupeIn_2_Digit = {
+            one: "82px",
+            two: "68px",
+            three: "672px",
+            four: "655px",
+            five: "67px",
+            six: "56px",
+            seven: "651px",
+            eight: "637px",
+            nine: "95px",
+            ten: "88px"
+        }
+
+
+        let sold = document.getElementsByClassName("sold")
+        let images = document.querySelectorAll(".comboImages")
+        let vegMark = document.querySelectorAll(".vegMark")
+        let headingH2 = document.querySelectorAll(".heading h2")
+        let headingP = document.querySelectorAll(".heading p")
+        fetch(url).then(result => result.text()).then(function (csvtext) {
+            return csv().fromString(csvtext);
+        }).then(function (csv) {
+
+            function digit(price, price1, threeDigits, twoDigits, rupe, rupedigit_3, rupedigit_2, threeDigit_bottoms, twoDigit_bottoms) {
+
+                if (price.length == 3) {
+                    price1.style.left = threeDigits;
+                    price1.style.bottom = threeDigit_bottoms;
+                    rupe.style.top = rupedigit_3
+                } else {
+                    price1.style.left = twoDigits;
+                    price1.style.bottom = twoDigit_bottoms;
+                    rupe.style.top = rupedigit_2;
+                }
+            }
+
+            let value = 0;
+            for (const key in threeDigit) {
+                digit(csv[value].price, price[value], threeDigit[key], twoDigit[key], rupe[value], rupeIn_3_Digit[key], rupeIn_2_Digit[key], threeDigit_bottom[key], twoDigit_bottom[key])
+                value++
+            }
+
+            let n = 0;
+            let k = 0;
+            while (n <= 9) {
+                price[k].innerHTML = csv[n].price
+                n++
+                k++
+            }
+            let i = 0;
+            let j = 0;
+            while (j <= 9) {
+                if (csv[j].sold == "yes") {
+                    sold[i].style.display = "flex"
+                    j++;
+                    i++;
+                } else {
+                    sold[i].style.display = "none"
+                    i++;
+                    j++;
+                }
+            }
+
+        images.forEach((element, index) => {
+        let string="";
+        let c = []
+        c = window.location.href.split("/")
+        c.pop()
+        let d= c
+        let e= d.splice(2)
+        for(let i = 0; i < csv[index].comboItems.split(",").length; i++) {
+            csv[index].comboItems!=""?
+            string+=`<img src="${d[0]+'//'+e.join("/")+'/img/'+csv[index].comboItems.split(",")[i] + '.png'}" alt="">`
+            :null
+        }
+        element.innerHTML=string
+        console.log(string)
+    });
+        vegMark.forEach((element, index) => {
+            let string="";
+        let c = []
+        c = window.location.href.split("/")
+        c.pop()
+        let d= c
+        let e= d.splice(2)
+           element.src= `${d[0]+'//'+e.join("/")+'/img/'+csv[index].category + '.png'}`   
+    });
+        headingH2.forEach((element, index) => {
+            element.innerHTML=`${csv[index].headingFirstName}<br><span class="">${csv[index].headingSecondName}</span>`
+        })
+        headingP.forEach((element, index) => {
+            element.innerHTML=`${csv[index].headingOfferCombo}<br><span class="">${csv[index].headingOfferPatty}</span>`
+        })
+
+    })
+
+
+
+    </script>
+</body>
+
+</html>
