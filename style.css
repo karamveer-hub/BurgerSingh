@@ -131,7 +131,7 @@ bottom: 20px;
 .heading2 h2 span,.heading2 p span,.heading4 p span,.heading4 h2 span{color: white;}
 .heading2{top: 57%;left: 16%;}
 .heading3{top: 0%;left: 36%;}
-.heading4{top: 58%;left: 55%;height:360px ;}
+.heading4{top: 58%;left: 56%;}
 .heading5{top: 6%;left: 76%;height: 340px;width: 480px;}
 .comboImages1{
     top: 45%;
@@ -274,13 +274,13 @@ span, .rupesign{
 }
 .rupe7{
     /* top: 685px; */
-    left: 1425px;
+    left: 1405px;
     font-size: 2.1rem;
     color: yellow;
    }
 .rupe8{
     /* top: 662px; */
-    left: 1501px;
+    left: 1481px;
     font-size: 1.4rem;
   color: #ffffff;
 }
